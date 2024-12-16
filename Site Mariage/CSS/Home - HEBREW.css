@@ -1,0 +1,272 @@
+/* Réinitialisation des marges et définition de la hauteur de la page */
+html, body {
+    height: 100%; /* Assure que le corps prend toute la hauteur de la fenêtre */
+    margin: 0; /* Supprime les marges par défaut */
+    font-family: Arial, sans-serif; /* Définit la police de caractères */
+}
+
+/* Style pour l'en-tête */
+header {
+    background: rgba(0, 0, 0, 0); /* Fond transparent pour l'en-tête */
+}
+
+/* Style pour le corps de la page */
+body {
+    background-image: url('/Image/Fond.jpg'); /* Image de fond */
+    background-size: cover; /* Couvre tout l'espace disponible */
+    background-position: center; /* Centre l'image de fond */
+    background-repeat: no-repeat; /* Ne répète pas l'image */
+    color: white; /* Définit la couleur du texte par défaut */
+}
+
+/* ---------SWITCH------------ */
+
+.toggle-wrapper {
+    position: fixed; /* Fixe le toggle même en cas de scroll */
+    top: 10px; /* Distance du haut */
+    right: 10px; /* Distance de la droite */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Toujours au-dessus des autres éléments */
+}
+
+/* Style du toggle */
+.toggle-container {
+    position: relative;
+    width: 70px; /* Ajustement pour contenir les drapeaux */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.toggle-label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 35px; /* Ajustée pour inclure les drapeaux */
+    background-color: #f0cbaa;
+    border-radius: 18px; /* Bord arrondi ajusté */
+    padding: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    overflow: hidden; /* Empêche le contenu de dépasser */
+}
+
+.flag {
+    position: relative;
+    width: 28px; /* Taille ajustée pour les drapeaux */
+    height: 28px;
+    border-radius: 50% ;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Assure que le drapeau reste bien contenu */
+}
+
+.flag-fr {
+    box-shadow: 0 0 0 2px transparent;
+}
+
+.flag-il {
+    box-shadow: 0 0 0 2px transparent;
+}
+
+input[type="checkbox"]:not(:checked) + .toggle-label .flag-fr {
+    box-shadow: 0 0 0 2px #6F4C3E;
+    transform: scale(1.1);
+}
+
+input[type="checkbox"]:checked + .toggle-label .flag-il {
+    box-shadow: 0 0 0 2px #6F4C3E;
+    transform: scale(1.1);
+}
+
+/* ----------------END SWITCH--------------- */
+
+
+
+/* Conteneurs pour les éléments de la page */
+.container1 {
+    display: flex; /* Utilisation de Flexbox pour l'alignement */
+    justify-content: center; /* Centre le contenu horizontalement */
+    position: absolute; /* Positionnement absolu pour le contrôle précis */
+    left: 50%; /* Centre le conteneur horizontalement */
+    transform: translateX(-50%); /* Ajuste le conteneur pour le centrer */
+}
+
+.container2 {
+    display: flex; /* Utilisation de Flexbox pour l'alignement */
+    justify-content: center; /* Centre le contenu horizontalement */
+    position: absolute; /* Positionnement absolu pour le contrôle précis */
+    left: 50%; /* Centre le conteneur horizontalement */
+    transform: translateX(-50%); /* Ajuste le conteneur pour le centrer */
+}
+
+.countdown {
+    display: flex; /* Utilisation de Flexbox pour l'alignement */
+    justify-content: center; /* Centre le contenu horizontalement */
+    position: absolute; /* Positionnement absolu pour le contrôle précis */
+    left: 50%; /* Centre le conteneur horizontalement */
+    transform: translateX(-50%); /* Ajuste le conteneur pour le centrer */
+}
+
+/* Positionnement spécifique pour le premier conteneur */
+.container1 {
+    top: 5%; /* Positionne le conteneur à 5% du haut de la page */
+}
+
+/* Positionnement spécifique pour le deuxième conteneur */
+.container2 {
+    top: 80%; /* Positionne le conteneur à 80% du haut de la page */
+}
+
+/* Style pour le compte à rebours */
+.countdown {
+    top: 15%; /* Positionne le compte à rebours à 15% du haut de la page */
+    gap: 5px; /* Espacement entre les éléments de la countdown */
+    text-align: center; /* Centre le texte dans le conteneur */
+}
+
+.btn-sons {
+    cursor: pointer; /* Change le curseur en pointeur sur survol */
+    font-size: 3vw; /* Taille de police relative à la largeur de la fenêtre */
+    background-color: #f0cbaa; /* Couleur de fond du bouton */
+    color: #6F4C3E; /* Couleur du texte */
+    border: none; /* Supprime la bordure par défaut */
+    width: 10vw; /* Largeur relative qui s'adapte à la taille de la fenêtre */
+    height: 10vw; /* Hauteur relative qui s'adapte à la taille de la fenêtre */
+    border-radius: 50%; /* Rendre le bouton complètement rond */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition douce pour le changement de couleur et l'échelle */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée */
+}
+
+/* Styles pour l'état focus du bouton de sons */
+.btn-sons:focus {
+    outline: none; /* Supprime le contour lors du focus */
+}
+
+/* Styles pour l'état hover du bouton de sons */
+.btn-sons:hover {
+    background-color: #ffeafa33; /* Change la couleur de fond au survol */
+}
+
+/* Styles pour l'état actif du bouton de sons */
+.btn-sons:active {
+    transform: scale(0.95); /* Réduit légèrement la taille lors du clic */
+}
+
+/* Style pour le bouton d'invitation */
+.btn-invitation {
+    cursor: pointer; /* Change le curseur en pointeur sur survol */
+    font-size: 4vw; /* Taille de police relative à la largeur de la fenêtre */
+    background-color: #f0cbaa; /* Couleur de fond du bouton */
+    color: #6F4C3E; /* Couleur du texte */
+    border: none; /* Supprime la bordure par défaut */
+    padding: 4% 6%; /* Espacement interne du bouton */
+    border-radius: 50px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée */
+}
+
+/* Styles pour l'état focus du bouton d'invitation */
+.btn-invitation:focus {
+    outline: none; /* Supprime le contour lors du focus */
+}
+
+/* Styles pour l'état hover du bouton d'invitation */
+.btn-invitation:hover {
+    background-color: #ffeafa33; /* Change la couleur de fond au survol */
+}
+
+/* Styles pour l'état actif du bouton d'invitation */
+.btn-invitation:active {
+    transform: scale(0.95); /* Réduit légèrement la taille lors du clic */
+}
+
+/* Style pour la boîte de minuterie */
+.box_timer {
+    background-color: #f0cbaa; /* Fond blanc avec transparence */
+    border-radius: 60px; /* Coins arrondis */
+    padding: 5%; /* Espacement interne */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    transition: transform 0.3s; /* Transition pour l'effet de survol */
+    height: 12vw; /* Hauteur relative */
+    width: 12vw; /* Largeur relative */
+    display: flex; /* Utiliser flexbox pour centrer le contenu */
+    flex-direction: column; /* Aligner le contenu verticalement */
+    justify-content: center; /* Centrer verticalement */
+    align-items: center; /* Centrer horizontalement */
+}
+
+/* Effet de survol pour la boîte de minuterie */
+.box_timer:hover {
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+/* Style pour la valeur de la minuterie */
+.value_timer {
+    font-size: 5vw; /* Taille de la valeur relative */
+    font-weight: bold; /* Épaisseur de la police */
+    color: #6F4C3E; /* Couleur pour les valeurs */
+}
+
+/* Style pour le label de la minuterie */
+.label_timer {
+    display: block; /* Affichage en bloc pour le label */
+    font-size: 3vw; /* Taille de la police pour le label */
+    font-weight: bold; /* Épaisseur de la police */
+    color: #6F4C3E; /* Couleur pour le label */
+}
+
+/* Style pour le pied de page */
+footer {
+    background: rgba(0, 0, 0, 0); /* Ajouter un fond semi-transparent pour le footer */
+    color: white; /* Couleur du texte */
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+/* Styles pour les petits écrans */
+@media only screen and (max-width: 760px) {
+    html {
+        overflow: hidden; /* Empêche le défilement */
+    }
+    
+    body {
+        font-size: 30px; /* Ajuster la taille de la police pour les petits écrans */
+    }
+
+    .container1 {
+        width: 70%; /* S'assurer que le conteneur prend toute la largeur de l'écran */
+        top: 5%; /* Positionne le conteneur à 5% du haut de la page */
+    }
+
+    .container2 {
+        width: 80%; /* S'assurer que le conteneur prend toute la largeur de l'écran */
+        top: 85%; /* Ajuster la position du bouton d'invitation */
+    }
+
+    .countdown {
+        width: 100%; /* S'assurer que le compte à rebours prend toute la largeur */
+        top: 10%; /* Positionne le compte à rebours à 10% du haut de la page */
+        
+    }
+
+    .box_timer {
+        background-color:#f0cbaa; /* Fond blanc avec transparence */
+        transition: transform 0.3s; /* Transition pour l'effet de survol */
+        height: 40px; /* Hauteur fixe pour toutes les boîtes */
+        width: 40px; /* Largeur fixe pour toutes les boîtes (optionnel) */
+    }
+    
+}

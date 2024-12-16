@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage Noi & Sam</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/Home.css"> <!-- Votre fichier CSS -->
+</head>
+<body>
+
+    <header>
+        <!-- Contenu de l'en-tête si nécessaire -->
+    </header>
+
+    <div class="container1">
+        <button id="btn-sons" class="btn-sons">
+            <i class="material-icons" id="son-icon">volume_off</i>
+        </button>
+    </div>
+<!-- -----------TOGGLE SWITCH------------ -->
+
+    <div class="toggle-wrapper">
+        <div class="toggle-container">
+            <input type="checkbox" id="toggle" />
+            <label for="toggle" class="toggle-label">
+                <div class="flag flag-fr">
+                    <img src="Image/France.svg" alt="Drapeau français">
+                </div>
+                <div class="flag flag-il">
+                    <img src="Image/Israel.svg" alt="Drapeau israélien">
+                </div>
+            </label>
+        </div>
+    </div>
+<!-- -----------TOGGLE SWITCH------------ -->
+    
+
+    <div class="container2">
+        <button id="btn-invitation" class="btn-invitation">Voir l'invitation</button>
+        </button>
+    </div>
+
+    <div class="countdown" id="countdown">
+        <div class="box_timer">
+            <span class="value_timer" id="days">0</span>
+            <span class="label_timer">jours</span>
+        </div>
+        <div class="box_timer">
+            <span class="value_timer" id="hours">0</span>
+            <span class="label_timer">heures</span>
+        </div>
+        <div class="box_timer">
+            <span class="value_timer" id="minutes">0</span>
+            <span class="label_timer">minutes</span>
+        </div>
+        <div class="box_timer">
+            <span class="value_timer" id="seconds">0</span>
+            <span class="label_timer">secondes</span>
+        </div>
+    </div>
+    
+
+    <footer>
+        <!-- Contenu du pied de page si nécessaire -->
+    </footer>
+
+    <audio id="backgroundAudio" src="Music.mp3" preload="auto" loop></audio>
+    <script src="JAVASCRIPT/Home.js"></script> <!-- Votre fichier JavaScript -->
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation au mariage</title>
+    <!-- Lien vers la feuille de style CSS -->
+    <link rel="stylesheet" href="CSS/Invitation.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Ms+Madi&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <button id="btn-sons" class="btn-sons">
+                <i class="material-icons" id="son-icon">volume_off</i>
+            </button>
+        </div>
+    </header>
+
+    <p><img src="Image/logo Mariage.png" alt="Logo_Mariage" class="Logo-image"></p>
+
+    <div class="Container_Family">
+        <div class="column_Famille_Assous">
+            <p>Mr & Mme Hubert Bokobza <br> 
+               Mme Thérèse Assous <br>  
+               Mr & Mme Stephane Assous <br> 
+            </p>
+        </div>
+        <div class="column_Famille_Saffar">
+            <p>Mr & Mme Marcel Benhaim <br> 
+               Mme Jacqueline Saffar <br>  
+               Mr & Mme Patrick Saffar <br>    
+            </p>
+        </div>
+    </div>
+    
+    
+    <section class="Invitation_txt" id="Invitation_txt">
+
+        <p class="Texte_invitation_1">Ont la joie de vous faire part du mariage de leurs petits-enfants et enfants</p>
+        <p class="Nom_en_grand">Noï  &nbsp<img src="Image/alliance.png" alt="Alliance" class="alliance-image"> Samuel</p>
+        <p class="Texte_invitation_2">et seront honorés par votre présence le  </p>
+        <p class="Date_Heure_Infos">Lundi 18 Août 2025 <br> Houppa à 18 h 00 précises <br>Suivie de la Kabalat Panim à 19 h 00<br><br> A la salle &laquo Alma &raquo <br> Sheizaf St, Even Yehuda </p>
+        <br>
+        <p class="Dead">Une pensée particulière pour nos grands-pères bien aimés <br>Mr Jacky Saffar  z"l<br>Mr François Assous  z"l</p>
+        <br>
+        <div class="button-container-waze">
+            <a href="https://ul.waze.com/ul?place=ChIJQbSUICQ_HRURtGZLcAbXKeQ&ll=32.27920190%2C34.89226340&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" class="no-underline">
+                <button class="btn_waze">
+                    <img src="Image/waze-icon.svg" alt="Icône" class="icon">
+                    Itinéraire
+                </button>
+            </a>
+        </div>
+       
+
+    </section>
+    <br>
+    <section class="Formulaire" id="Formulaire">
+        <fieldset>
+            <legend>Réponse souhaitée avant le 18/06/2025</legend> 
+            <form class="Formulaire_invitations" id="Formulaire_invitations">
+                
+                <label for="fname">Prénom :</label><br>
+                <input type="text" id="fname" name="Prenom" class="fname" required><br><br>
+                <label for="lname">Nom de famille :</label><br>
+                <input type="text" id="lname" name="Nom" class="lname" required><br><br>
+    
+                <input type="radio" id="present" name="Presence" value="Assisteront" required>
+                <label for="present">Assisteront</label><br>
+                <input type="radio" id="pas_present" name="Presence" value="N'assisteront pas" required>
+                <label for="pas_present">N'assisteront pas</label><br><br>
+    
+                <label for="Number_peoples">Nombre de personnes :</label><br><br>
+                <select id="Number_peoples" name="Nombre_de_personne" class="Number_peoples" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+    
+                <p class="message_pour_les_mariee">Message pour les mariés :</p>
+                <textarea name="Message_pour_les_mariee" style="width:400px; height: 100px;" class="MsgMarie"></textarea>
+                <br>
+                <button type="submit" class="envoyeeFormulaire" id="envoyeeFormulaire">Envoyer</button>
+            </form>
+        </fieldset>
+    </section>
+    
+    <footer>
+        <p>&copy; Samuel</p>
+    </footer>
+    
+    <!-- Lien vers le fichier JavaScript -->
+    <audio id="backgroundAudio" src="Music.mp3" preload="auto" loop></audio>
+    <script src="JAVASCRIPT/Invitation.js"></script>
+</body>
+</html>

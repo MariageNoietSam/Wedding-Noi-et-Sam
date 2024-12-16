@@ -1,0 +1,115 @@
+/* Réinitialisation des marges et définition de la hauteur de la page */
+html, body {
+    height: 100%; /* Assure que le corps prend toute la hauteur de la fenêtre */
+    margin: 0; /* Supprime les marges par défaut */
+    font-family: Arial, sans-serif; /* Définit la police de caractères */
+}
+
+/* Style pour l'en-tête */
+header {
+    background: rgba(0, 0, 0, 0); /* Fond transparent pour l'en-tête */
+}
+
+/* Style pour le corps de la page */
+body {
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #F4F4F4;
+    color: #333;
+    padding: 20px;
+    background-image: url('/Image/Background\ merci.jpg'); /* Image de fond */
+    background-size: cover; /* Couvre tout l'espace disponible */
+    background-position: center; /* Centre l'image de fond */
+    background-repeat: no-repeat; /* Ne répète pas l'image */
+}
+
+h1 {
+    color: #f0cbaa;
+    text-align: center;
+    font-size: xx-large;
+    text-shadow: 
+    -1px -1px 0 black, /* Ombre en haut à gauche */
+    1px -1px 0 black,  /* Ombre en haut à droite */
+    -1px 1px 0 black,  /* Ombre en bas à gauche */
+    1px 1px 0 black;   /* Ombre en bas à droite */
+    
+}
+
+p{
+    font-size: x-large;
+    color: #f0cbaa;
+    text-shadow: 
+    -1px -1px 0 black, /* Ombre en haut à gauche */
+    1px -1px 0 black,  /* Ombre en haut à droite */
+    -1px 1px 0 black,  /* Ombre en bas à gauche */
+    1px 1px 0 black;   /* Ombre en bas à droite */
+    text-align: center;
+    top: 85%;
+    display: flex; /* Utilisation de Flexbox pour l'alignement */
+    justify-content: center; /* Centre le contenu horizontalement */
+    position: absolute;
+}
+
+
+.container2 {
+    display: flex; /* Utilisation de Flexbox pour l'alignement */
+    justify-content: center; /* Centre le contenu horizontalement */
+    position: absolute; /* Positionnement absolu pour le contrôle précis */
+    left: 50%; /* Centre le conteneur horizontalement */
+    transform: translateX(-50%); /* Ajuste le conteneur pour le centrer */
+}
+
+/* Positionnement spécifique pour le deuxième conteneur */
+.container2 {
+    top: 80%; /* Positionne le conteneur à 80% du haut de la page */
+}
+
+
+/* Style pour le bouton d'invitation */
+.btn-rtracceuil {
+    cursor: pointer; /* Change le curseur en pointeur sur survol */
+    font-size: 4vw; /* Taille de police relative à la largeur de la fenêtre */
+    background-color: #f0cbaa; /* Couleur de fond du bouton */
+    color: #6F4C3E; /* Couleur du texte */
+    border: none; /* Supprime la bordure par défaut */
+    padding: 4% 6%; /* Espacement interne du bouton */
+    border-radius: 50px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition douce pour le changement de couleur */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée */
+}
+
+/* Styles pour l'état focus du bouton d'invitation */
+.btn-rtracceuil:focus {
+    outline: none; /* Supprime le contour lors du focus */
+}
+
+/* Styles pour l'état hover du bouton d'invitation */
+.btn-rtracceuil:hover {
+    background-color: #ffeafa33; /* Change la couleur de fond au survol */
+}
+
+/* Styles pour l'état actif du bouton d'invitation */
+.btn-rtracceuil:active {
+    transform: scale(0.95); /* Réduit légèrement la taille lors du clic */
+}
+
+
+/* Styles pour les petits écrans */
+@media only screen and (max-width: 760px) {
+    html {
+        overflow: hidden; /* Empêche le défilement */
+    }
+    
+    body {
+        font-size: 30px; /* Ajuster la taille de la police pour les petits écrans */
+    }
+
+    .container2 {
+        width: 80%; /* S'assurer que le conteneur prend toute la largeur de l'écran */
+        top: 80%; /* Ajuster la position du bouton d'invitation */
+    }
+
+
+    
+}

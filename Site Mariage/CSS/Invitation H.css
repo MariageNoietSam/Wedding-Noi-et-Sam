@@ -1,0 +1,276 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box; /* Évite que les marges ou remplissages dépassent la taille des conteneurs */
+}
+
+
+html {
+    overflow-x:hidden; /* Désactive le défilement horizontal */
+}
+
+html, body {
+    overflow-x: hidden; /* Désactive le défilement horizontal */
+    margin: 0; /* Évite tout décalage dû à des marges */
+    padding: 0; /* Supprime les remplissages inattendus */
+    width: 100%; /* Empêche les débordements horizontaux */
+}
+
+body {
+    background-color: #6F4C3E; /* Couleur de fond marron */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les remplissages par défaut */
+    color: #f0cbaa; /* Couleur du texte */
+}
+
+/* Ajout du fond avec calque */
+body::before {
+    content: '';
+    position: fixed; /* Fond sur toute la page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Image/fond\ Form.png');
+    background-size: cover; /* Couvre toute la page */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #6F4C3E; /* Couleur de calque */
+    opacity: 4; /* Transparence */
+    z-index: -2; /* Derrière tout le contenu */
+}
+
+
+/* Exclure la section formulaire */
+.Formulaire {
+    position: relative; /* Isoler le formulaire */
+    z-index: 2; /* Au-dessus du fond */
+    background-color: #6F4C3E; /* Fond uni */
+}
+
+/* Maintenir tout le reste au-dessus du calque */
+body > *:not(.Formulaire) {
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    text-align: center; /* Centre le texte horizontalement */
+    position: relative; /* Permet de gérer le contexte pour d'autres styles */
+    z-index: 1; /* S'assure que le titre est visible par-dessus le fond */
+    padding: 20px 0; /* Ajoute un espacement vertical */
+    margin: 0; /* Supprime les marges par défaut */
+    font-family: "Charm", cursive; /* Applique une belle police */
+    font-size: 1em; /* Ajuste la taille du texte */
+    color: #f0cbaa; /* Utilise la couleur définie */
+}
+
+/* Positionnement spécifique pour le premier conteneur */
+.container1 {
+    position: relative;
+    top: 5%; /* Positionne le conteneur à 5% du haut de la page */
+    left: 35%;
+}
+
+.btn-sons {
+    position: absolute;
+    cursor: pointer; /* Change le curseur en pointeur sur survol */
+    font-size: 3vw; /* Taille de police relative à la largeur de la fenêtre */
+    background-color: #f0cbaa; /* Couleur de fond du bouton */
+    color: #6F4C3E; /* Couleur du texte */
+    border: none; /* Supprime la bordure par défaut */
+    width: 10vw; /* Largeur relative qui s'adapte à la taille de la fenêtre */
+    height: 10vw; /* Hauteur relative qui s'adapte à la taille de la fenêtre */
+    border-radius: 50%; /* Rendre le bouton complètement rond */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition douce pour le changement de couleur et l'échelle */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre portée */
+}
+
+/* Styles pour l'état focus du bouton de sons */
+.btn-sons:focus {
+    outline: none; /* Supprime le contour lors du focus */
+}
+
+/* Styles pour l'état hover du bouton de sons */
+.btn-sons:hover {
+    background-color: #ffeafa33; /* Change la couleur de fond au survol */
+}
+
+/* Styles pour l'état actif du bouton de sons */
+.btn-sons:active {
+    transform: scale(0.95); /* Réduit légèrement la taille lors du clic */
+}
+
+
+.Logo-image {
+    position: relative;
+    width: 100px; /* Largeur de l'image */
+    height: auto; /* Conserve le ratio de l'image */
+    margin: 0 10px;
+    position: relative;
+    right: 33%;
+}
+
+/* Conteneur principal des colonnes */
+.Container_Family {
+    display: flex; /* Utilisation de flexbox */
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+/* ... (reste inchangé, même que votre code original) ... */
+
+/* Style des colonnes */
+.column_Famille_Assous, .column_Famille_Saffar {
+    flex: 1; /* Les colonnes prennent une part égale de l'espace disponible */
+    min-width: 200px; /* Largeur minimale */
+    max-width: 400px; /* Largeur maximale */
+    font-size: small;
+    text-align: center;
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px; /* Espacement interne */
+    box-sizing: border-box; /* Inclut les paddings dans la largeur totale */
+}
+
+/* Titre en grand */
+.Nom_en_grand {
+    font-family: "Charm", cursive;
+    font-weight: 300;
+    font-style: normal;
+    color: #f0cbaa; /* Couleur marron */
+    font-size: 2em; /* Taille de police */
+    text-align: center;
+}
+
+/* Image stylisée */
+.alliance-image {
+    width: 100px; /* Largeur de l'image */
+    height: auto; /* Conserve le ratio de l'image */
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+/* Texte de l'invitation */
+.Invitation_txt {
+    position: relative; /* Nécessaire pour que le pseudo-élément se positionne correctement */
+    text-align: center;
+    font-family: "Cookie", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+}
+
+
+/* Texte des morts (en italique et petit) */
+.Dead {
+    font-size: small;
+    font-style: italic;
+}
+
+/* Conteneur du bouton */
+.button-container-waze {
+    display: flex;
+    justify-content: center; /* Centre le bouton horizontalement */
+    align-items: center; /* Centre le bouton verticalement */
+}
+
+/* Style du bouton */
+.btn_waze {
+    display: flex;
+    align-items: center;
+    background-color: #3B2A2A;
+    color: #f0cbaa;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn_waze:hover {
+    background-color: #f0cbaaa1;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border: 0px;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+
+/* Styles pour les formulaires */
+fieldset {
+    border: 1px solid #f0cbaa;
+}
+
+legend {
+    text-align: center;
+    margin: 10px;
+}
+
+form {
+    background-color: #6F4C3E;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.fname, .lname, .Number_peoples, .MsgMarie {
+    background-color: #6F4C3E;
+    color: #f0cbaa;
+    border: 1px solid #f0cbaa;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%; /* Utilisation de 100% pour s'adapter */
+    max-width: 300px;
+    height: auto;
+}
+
+.MsgMarie {
+    resize: none; /* Désactiver le redimensionnement */
+}
+
+.envoyeeFormulaire {
+    background-color: #3B2A2A;
+    color: #f0cbaa;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.envoyeeFormulaire:hover {
+    background-color: #6F4C3E;
+}
+
+/* Media Queries pour petits écrans */
+@media only screen and (max-width: 767px) {
+    
+    
+    .Container_Family {
+        flex-wrap: wrap; /* Permet de passer les colonnes à la ligne */
+        justify-content: center; /* Centre les colonnes */
+        gap: 20px; /* Espacement plus grand entre les colonnes */
+    }
+
+    .column_Famille_Assous, .column_Famille_Saffar {
+        flex: 1 1 45%; /* Chaque colonne prend 45% de l'espace disponible */
+        min-width: 150px; /* Largeur minimale pour les petits écrans */
+    }
+
+    .Nom_en_grand {
+        font-size: 1.5em; /* Réduction de la taille de la police */
+    }
+
+    
+}
